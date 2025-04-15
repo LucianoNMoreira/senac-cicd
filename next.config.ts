@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   // https://nextjs.org/docs/app/api-reference/config/next-config-js/output
   output: 'export',
   // https://nextjs.org/docs/app/api-reference/config/next-config-js/distDir
-  // distDir: 'dist',
+  distDir: 'dist',
 
   // https://nextjs.org/docs/app/api-reference/config/next-config-js/basePath
   basePath: process.env.SUBPATH || '/',
