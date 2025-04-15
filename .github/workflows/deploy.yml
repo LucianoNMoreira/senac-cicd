@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Publicar no GitHub Pages
 
 # Quando executar (push na branch main)
 on:
@@ -17,11 +17,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Clonar repositório
         uses: actions/checkout@v4
-      - name: Install Dependencies
+      - name: Instalar dependências
         run: npm install
-      - name: Run Tests
+      - name: Executar testes
         run: npm run test
 
   deploy:
@@ -30,19 +30,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Clonar repositório
         uses: actions/checkout@v4
-      - name: Install Dependencies
+      - name: Instalar dependências
         run: npm install
       # Faz o build do projeto
-      - name: Build
+      - name: Exportar HTML, CSS e JS
         run: npm run build
-      - name: Setup Pages
+      - name: Configurar páginas
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+      - name: Subir arquivos
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out/'
-      - name: Deploy to GitHub Pages
+          path: './out'
+      - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
