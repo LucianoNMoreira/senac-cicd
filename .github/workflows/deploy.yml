@@ -11,9 +11,15 @@ permissions:
   pages: write
   id-token: write
 
-# Etapas
-jobs:
+stages:
+  - name: Testes
+    jobs:
+      - test
+  - name: Deploy
+    jobs:
+      - deploy
 
+jobs:
   test:
     runs-on: ubuntu-latest
     steps:
