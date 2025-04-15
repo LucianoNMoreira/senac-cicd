@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-// const SUBPATH = process.env.SUBPATH || '';
-const SUBPATH = '';
+const SUBPATH = process.env.SUBPATH || '';
 
 export default function Home() {
   return (
