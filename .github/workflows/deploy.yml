@@ -29,8 +29,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    # env:
-    #   SUBPATH: '/senac-cicd'
+    env:
+      # SUBPATH: '/senac-cicd'
+      SUBPATH: '/'
     steps:
       - name: Clonar repositório
         uses: actions/checkout@v4
