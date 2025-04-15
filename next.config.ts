@@ -8,9 +8,9 @@ const nextConfig: NextConfig = {
   distDir: 'dist',
 
   // https://nextjs.org/docs/app/api-reference/config/next-config-js/basePath
-  basePath: process.env.SUBPATH || '/',
+  basePath: process.env.SUBPATH,
   // https://nextjs.org/docs/app/api-reference/config/next-config-js/assetPrefix
-  assetPrefix: process.env.SUBPATH || '/',
+  assetPrefix: process.env.SUBPATH,
 };
 
 export default nextConfig;
