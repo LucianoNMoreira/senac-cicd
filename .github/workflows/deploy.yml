@@ -32,6 +32,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: npm install
       # Faz o build do projeto
       - name: Build
         run: npm run build
