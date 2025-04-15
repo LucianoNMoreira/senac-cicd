@@ -45,7 +45,7 @@ jobs:
       - name: Subir arquivos
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out'
+          path: './dist'
       - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
